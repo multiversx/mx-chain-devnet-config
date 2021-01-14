@@ -722,7 +722,7 @@
     FolderPath = "health-records"
 
 [SoftwareVersionConfig]
-    StableTagLocation = "https://api.github.com/repos/ElrondNetwork/elrond-config-testnet/releases/latest"
+    StableTagLocation = "https://api.github.com/repos/ElrondNetwork/elrond-config-devnet/releases/latest"
     PollingIntervalInMinutes = 65
 
 [DbLookupExtensions]
