@@ -73,6 +73,7 @@
     GasScheduleByEpochs = [
         { StartEpoch = 0, FileName = "gasScheduleV1.toml" },
         { StartEpoch = 1, FileName = "gasScheduleV2.toml" },
+        { StartEpoch = 96, FileName = "gasScheduleV3.toml" },
     ]
 
 [StoragePruning]
@@ -520,7 +521,7 @@
 [AddressPubkeyConverter]
     Length = 32
     Type = "bech32"
-    SignatureLength = 0
+    SignatureLength = 64
 
 [ValidatorPubkeyConverter]
     Length = 96
