@@ -5,7 +5,7 @@
     UnBondPeriod = 2500
     MinStepValue = "100000000000000000000"
     StakeEnableEpoch = 0
-    StakingV2Epoch = 647
+    StakingV2Epoch = 652
     DoubleKeyProtectionEnableEpoch = 1
     NumRoundsWithoutBleed = 100
     MaximumPercentageToBleed = 0.5
@@ -29,11 +29,11 @@
 
 [DelegationManagerSystemSCConfig]
     MinCreationDeposit = "1250000000000000000000" #1.25K eGLD
-    EnabledEpoch = 647 #enable epoch should not be 0
+    EnabledEpoch = 652 #enable epoch should not be 0
     MinStakeAmount = "10000000000000000000" #10 eGLD
     ConfigChangeAddress = "erd1vxy22x0fj4zv6hktmydg8vpfh6euv02cz4yg0aaws6rrad5a5awqgqky80" #should use a multisign contract instead of a wallet address
 
 [DelegationSystemSCConfig]
-    EnabledEpoch   = 647 #enable epoch should not be 0
+    EnabledEpoch   = 652 #enable epoch should not be 0
     MinServiceFee  = 0
     MaxServiceFee  = 10000
