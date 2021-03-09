@@ -36,6 +36,9 @@
         # /address/:address/username will return the username of a given account
         { Name = "/:address/username", Open = true },
 
+        # /address/:address/keys will return all the key-value pairs of a given account
+        { Name = "/:address/keys", Open = true },
+
         # /address/:address/key/:key will return the value of a key for a given account
         { Name = "/:address/key/:key", Open = true },
 
@@ -56,9 +59,6 @@
 	Routes = [
          # /network/status will return metrics related to current status of the chain (epoch, nonce, round)
         { Name = "/status", Open = true },
-
-        # /network/total-staked will return total staked value
-        { Name = "/total-staked", Open = true },
 
         # /network/economics will return all economics related metrics
         { Name = "/economics", Open = true },
