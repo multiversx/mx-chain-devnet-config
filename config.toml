@@ -47,16 +47,16 @@
    GasPriceModifierEnableEpoch = 1
 
    # RepairCallbackEnableEpoch represents the epoch when the callback repair is activated for scrs
-   RepairCallbackEnableEpoch = 355
+   RepairCallbackEnableEpoch = 1
 
    # BlockGasAndFeesReCheckEnableEpoch represents the epoch when gas and fees used in each created or processed block are re-checked
-   BlockGasAndFeesReCheckEnableEpoch = 355
+   BlockGasAndFeesReCheckEnableEpoch = 1
 
    # TO BE CHANGED IN MAINNET AND PUBLIC TESTNET CONFIGS
    # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
    MaxNodesChangeEnableEpoch = [
         { EpochEnable = 0, MaxNumNodes = 320, NodesToShufflePerShard = 14 },
-        { EpochEnable = 660, MaxNumNodes = 360, NodesToShufflePerShard = 24 }
+        { EpochEnable = 2, MaxNumNodes = 360, NodesToShufflePerShard = 24 }
    ]
 
    # GenesisString represents the encoded string for the genesis block
@@ -78,9 +78,7 @@
 [GasSchedule]
     GasScheduleByEpochs = [
         { StartEpoch = 0, FileName = "gasScheduleV1.toml" },
-        { StartEpoch = 1, FileName = "gasScheduleV2.toml" },
-        { StartEpoch = 96, FileName = "gasScheduleV3.toml" },
-        { StartEpoch = 652, FileName = "gasScheduleV4.toml" },
+        { StartEpoch = 1, FileName = "gasScheduleV3.toml" },
     ]
 
 [StoragePruning]
