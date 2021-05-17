@@ -31,6 +31,7 @@ fi
 
 
 check_nonce_grows() {
+  echo "node is running...wait for the tree to be synced"
   FIRST_TIME=0
   PREVIOUS_NONCE=0
   RE='^[0-9]+$'
