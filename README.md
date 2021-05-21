@@ -14,3 +14,15 @@
 
 Elrond official devnet configuration files used in conjunction with elrond-go project. 
 For more info how to connect to the devnet, please check [docs.elrond.com](https://staging-docs.elrond.com/validators/devnet/config-scripts-devnet/)
+
+## run an elrond observer/validator with docker
+
+### build docker image
+```docker image build . -t elrond-node-image-last -f ./docker/Dockerfile```
+
+### run node with docker
+```
+CONFIG_FOLDER=path/to/folder/with/pem/file
+docker run --mount type=bind,source=${CONFIG_FOLDER}/,destination=/data elrond-node-image-last --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG
+```
+
