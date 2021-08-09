@@ -12,7 +12,7 @@
    StartInEpochEnabled = true
 
    # ChainID identifies the blockChain
-   ChainID = "1"
+   ChainID = "D"
 
    # MinTransactionVersion represents the minimum transaction version accepted
    MinTransactionVersion = 1
@@ -148,19 +148,6 @@
         Type = "LvlDBSerial"
         BatchDelaySeconds = 2
         MaxBatchSize = 30000
-        MaxOpenFiles = 10
-
-[TxLogsStorage]
-    [TxLogsStorage.Cache]
-        Name = "TxLogsStorage"
-        Capacity = 1000
-        Type = "SizeLRU"
-        SizeInBytes = 20971520 #20MB
-    [TxLogsStorage.DB]
-        FilePath = "Logs"
-        Type = "LvlDBSerial"
-        BatchDelaySeconds = 2
-        MaxBatchSize = 100
         MaxOpenFiles = 10
 
 [UnsignedTransactionStorage]
@@ -488,7 +475,7 @@
         Type = "LRU"
     [Antiflood.Topic]
         DefaultMaxMessagesPerSec = 15000
-        MaxMessages = [{ Topic = "heartbeat", NumMessagesPerSec = 60 },
+        MaxMessages = [{ Topic = "heartbeat", NumMessagesPerSec = 50 },
                        { Topic = "shardBlocks*", NumMessagesPerSec = 30 },
                        { Topic = "metachainBlocks", NumMessagesPerSec = 30 }]
     [Antiflood.WebServer]
@@ -555,12 +542,12 @@
    Type = "json"
 
 [EpochStartConfig]
-    MinRoundsBetweenEpochs = 14400
-    RoundsPerEpoch         = 14400
+    MinRoundsBetweenEpochs = 1200
+    RoundsPerEpoch         = 1200
     # Min and Max ShuffledOutRestartThreshold represents the minimum and maximum duration of an epoch (in percentage) after a node which
     # has been shuffled out has to restart its process in order to start in a new shard
-    MinShuffledOutRestartThreshold = 0.01
-    MaxShuffledOutRestartThreshold = 0.05
+    MinShuffledOutRestartThreshold = 0.06
+    MaxShuffledOutRestartThreshold = 0.30
 
     MinNumConnectedPeersToStart       = 6
     MinNumOfPeersToConsiderBlockValid = 6
@@ -625,30 +612,30 @@
     [VirtualMachine.Execution]
         ArwenVersions = [
             { StartEpoch = 0, Version = "v1.2" },
-            { StartEpoch = 326, Version = "v1.3" },
+            { StartEpoch = 3, Version = "v1.3" },
         ]
 
     [VirtualMachine.Querying]
         NumConcurrentVMs = 1
         ArwenVersions = [
             { StartEpoch = 0, Version = "v1.2" },
-            { StartEpoch = 326, Version = "v1.3" },
+            { StartEpoch = 3, Version = "v1.3" },
         ]
 
 [Hardfork]
     EnableTrigger = true
     EnableTriggerFromP2P = true
-    PublicKeyToListenFrom = "6a02b93375e78aed4e0e3369ef2182dfc060eea01df640eacc5eca5f759f62c8271fbbf90863e896e2453384118be20179433cb1dfc1bd8df962c80f3da94ea42dffaf70025b6fd6a5b4814bc4b15cf6751c990fe21d392f1bc88c15bd354a8c"
-    CloseAfterExportInMinutes = 10000
-    AfterHardFork = false
-    ImportFolder = "export"
-    StartRound = 10000
-    StartNonce = 10000
-    StartEpoch = 100
-    GenesisTime = 0
-    ValidatorGracePeriodInEpochs = 1 #defines how long is the rating computation disabled after hardfork
-    [Hardfork.ExportStateStorageConfig]
-        [Hardfork.ExportStateStorageConfig.Cache]
+    PublicKeyToListenFrom = "d6d32e28f2df244624eeaccf5e08f7a6c617a6c948e4a42e19c1b6f68ea0c77eba3ee10501e179f788455d7e77c3cf082bc9a7a4fa8f136a25497189a37d10bc6826cc3ed5da714f6c931bce5af271e5d558e3b8142ad1e367fd95a4c7f88c11"
+	CloseAfterExportInMinutes = 10000
+	AfterHardFork = false
+	ImportFolder = "export"
+	StartRound = 10000
+	StartNonce = 10000
+	StartEpoch = 100
+	GenesisTime = 0
+	ValidatorGracePeriodInEpochs = 1 #defines how long is the rating computation disabled after hardfork
+	[Hardfork.ExportStateStorageConfig]
+	    [Hardfork.ExportStateStorageConfig.Cache]
             Name = "HardFork.ExportStateStorageConfig"
             Capacity = 5000
             Type = "LRU"
@@ -680,8 +667,8 @@
             BatchDelaySeconds = 2
             MaxBatchSize = 1000
             MaxOpenFiles = 10
-    [Hardfork.ImportStateStorageConfig]
-        [Hardfork.ImportStateStorageConfig.Cache]
+	[Hardfork.ImportStateStorageConfig]
+	    [Hardfork.ImportStateStorageConfig.Cache]
             Name = "HardFork.ImportStateStorageConfig"
             Capacity = 5000
             Type = "LRU"
@@ -691,8 +678,8 @@
             BatchDelaySeconds = 2
             MaxBatchSize = 1000
             MaxOpenFiles = 10
-    [Hardfork.ImportKeysStorageConfig]
-        [Hardfork.ImportKeysStorageConfig.Cache]
+	[Hardfork.ImportKeysStorageConfig]
+	    [Hardfork.ImportKeysStorageConfig.Cache]
             Name = "HardFork.ImportKeysStorageConfig"
             Capacity = 5000
             Type = "LRU"
@@ -733,7 +720,7 @@
     FolderPath = "health-records"
 
 [SoftwareVersionConfig]
-    StableTagLocation = "https://api.github.com/repos/ElrondNetwork/elrond-config-mainnet/releases/latest"
+    StableTagLocation = "https://api.github.com/repos/ElrondNetwork/elrond-config-devnet/releases/latest"
     PollingIntervalInMinutes = 65
 
 [LogsAndEvents]
