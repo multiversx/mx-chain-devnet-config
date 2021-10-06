@@ -12,7 +12,7 @@
    StartInEpochEnabled = true
 
    # ChainID identifies the blockChain
-   ChainID = "1"
+   ChainID = "D"
 
    # MinTransactionVersion represents the minimum transaction version accepted
    MinTransactionVersion = 1
