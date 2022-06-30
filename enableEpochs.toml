@@ -156,9 +156,6 @@
     # FrontRunningProtectionEnableEpoch represents the epoch when the first version of protection against front running is enabled
     FrontRunningProtectionEnableEpoch = 4
 
-    # DisableOldTrieStorageEpoch represents the epoch when the old trie storage implementation will be disabled
-    DisableOldTrieStorageEpoch = 4
-
     # IsPayableBySCEnableEpoch represents the epoch when a new flag isPayable by SC is enabled
     IsPayableBySCEnableEpoch = 3
 
@@ -193,8 +190,14 @@
     # CheckCorrectTokenIDForTransferRoleEnableEpoch represents the epoch when the correct token ID check is applied for transfer role verification
     CheckCorrectTokenIDForTransferRoleEnableEpoch = 793
 
-    # CheckValueOnExecByCallerEnableEpoch represents the epoch when the check on value is enabled on exec by caller
-    CheckValueOnExecByCallerEnableEpoch = 833
+    # DisableExecByCallerEnableEpoch represents the epoch when the check on value is disabled on exec by caller
+    DisableExecByCallerEnableEpoch = 833
+
+    # FailExecutionOnEveryAPIErrorEnableEpoch represent the epoch when new protection in VM is enabled to fail all wrong API calls
+    FailExecutionOnEveryAPIErrorEnableEpoch = 1123
+
+    # ManagedCryptoAPIsEnableEpoch represents the epoch when new managed crypto APIs are enabled in the wasm VM
+    ManagedCryptoAPIsEnableEpoch = 1123
 
     # RefactorContextEnableEpoch represents the epoch when refactoring/simplifying is enabled in contexts
     RefactorContextEnableEpoch = 932

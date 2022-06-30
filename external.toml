@@ -6,8 +6,8 @@
     #Strongly suggested to activate this on a regular observer node.
     Enabled           = false
     IndexerCacheSize  = 0
-    URL               = "http://localhost:9200"
     BulkRequestMaxSizeInBytes = 4194304 # 4MB
+    URL               = "http://localhost:9200"
     UseKibana         = false
     Username          = ""
     Password          = ""
