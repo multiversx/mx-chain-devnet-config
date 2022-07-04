@@ -55,6 +55,7 @@
     # StakingV2EnableEpoch represents the epoch when staking v2 is enabled
     StakingV2EnableEpoch = 1
 
+    # DoubleKeyProtectionEnableEpoch represents the epoch when the double key protection will be enabled
     DoubleKeyProtectionEnableEpoch = 1
 
     # ESDTEnableEpoch represents the epoch when ESDT is enabled
@@ -193,14 +194,23 @@
     # DisableExecByCallerEnableEpoch represents the epoch when the check on value is disabled on exec by caller
     DisableExecByCallerEnableEpoch = 833
 
+    # RefactorContextEnableEpoch represents the epoch when refactoring/simplifying is enabled in contexts
+    RefactorContextEnableEpoch = 932
+
     # FailExecutionOnEveryAPIErrorEnableEpoch represent the epoch when new protection in VM is enabled to fail all wrong API calls
     FailExecutionOnEveryAPIErrorEnableEpoch = 1123
 
     # ManagedCryptoAPIsEnableEpoch represents the epoch when new managed crypto APIs are enabled in the wasm VM
     ManagedCryptoAPIsEnableEpoch = 1123
 
-    # RefactorContextEnableEpoch represents the epoch when refactoring/simplifying is enabled in contexts
-    RefactorContextEnableEpoch = 932
+    # ESDTMetadataContinuousCleanupEnableEpoch represents the epoch when esdt metadata is automatically deleted according to inshard liquidity
+    ESDTMetadataContinuousCleanupEnableEpoch = 100000
+
+    # HeartbeatDisableEpoch represents the epoch when heartbeat v1 messages stop being sent and processed
+    HeartbeatDisableEpoch = 100000
+
+    # MiniBlockPartialExecutionEnableEpoch represents the epoch when mini block partial execution will be enabled
+    MiniBlockPartialExecutionEnableEpoch = 100000
 
     # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
     MaxNodesChangeEnableEpoch = [
@@ -209,6 +219,7 @@
     ]
 
 [GasSchedule]
+    # GasScheduleByEpochs holds the configuration for the gas schedule that will be applied from specific epochs
     GasScheduleByEpochs = [
         { StartEpoch = 0, FileName = "gasScheduleV1.toml" },
         { StartEpoch = 1, FileName = "gasScheduleV5.toml" },
