@@ -212,6 +212,12 @@
     # MiniBlockPartialExecutionEnableEpoch represents the epoch when mini block partial execution will be enabled
     MiniBlockPartialExecutionEnableEpoch = 100000
 
+    # CheckFunctionArgumentEnableEpoch represents the epoch when the extra argument check is enabled in vm-common
+    CheckFunctionArgumentEnableEpoch = 1250
+
+    # CheckExecuteOnReadOnlyEnableEpoch represents the epoch when the extra checks are enabled for execution on read only
+    CheckExecuteOnReadOnlyEnableEpoch = 1250
+
     # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
     MaxNodesChangeEnableEpoch = [
         { EpochEnable = 0, MaxNumNodes = 320, NodesToShufflePerShard = 14 },
