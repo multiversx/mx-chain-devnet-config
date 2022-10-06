@@ -227,6 +227,9 @@
         { EpochEnable = 1, MaxNumNodes = 360, NodesToShufflePerShard = 24 }
     ]
 
+    # FixOldTokenLiquidityEnableEpoch represents the epoch when the fix for old token liquidity is enabled
+    FixOldTokenLiquidityEnableEpoch = 999999
+
 [GasSchedule]
     # GasScheduleByEpochs holds the configuration for the gas schedule that will be applied from specific epochs
     GasScheduleByEpochs = [
