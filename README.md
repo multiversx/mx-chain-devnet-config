@@ -1,28 +1,28 @@
 <div style="text-align:center">
   <img
-  src="https://raw.githubusercontent.com/ElrondNetwork/elrond-go/master/elrond_logo_01.svg"
-  alt="Elrond Network">
+  src="https://raw.githubusercontent.com/multiversx/mx-chain-go/master/multiversx-logo.svg"
+  alt="MultiversX">
 </div>
 <br>
 
 <br>
 
-[![](https://img.shields.io/badge/made%20by-Elrond%20Network-blue.svg?style=flat-square)](http://elrond.com/)
-[![](https://img.shields.io/badge/project-Elrond%20Network%20Devnet-blue.svg?style=flat-square)](http://elrond.com/)
+[![](https://img.shields.io/badge/made%20by-MultiversX-blue.svg?style=flat-square)](http://multiversx.com/)
+[![](https://img.shields.io/badge/project-MultiversX%20Devnet-blue.svg?style=flat-square)](http://multiversx.com/)
 
-# elrond-config for the official devnet (developer testnet)
+# mx-chain-devnet-config for the official devnet (developer testnet)
 
-Elrond official devnet configuration files used in conjunction with elrond-go project. 
-For more info how to connect to the devnet, please check [docs.elrond.com](https://staging-docs.elrond.com/validators/devnet/config-scripts-devnet/)
+MultiversX devnet configuration files used in conjunction with mx-chain-go project. 
+For more info how to connect to the devnet, please check [here](https://docs.multiversx.com/validators/nodes-scripts/config-scripts/)
 
-## run an elrond observer/validator with docker
+## run an MultiversX observer/validator with docker
 
 ### build docker image
-```docker image build . -t elrond-node-image-last -f ./docker/Dockerfile```
+```docker image build . -t chain-devnet-lacal -f ./docker/Dockerfile```
 
 ### run node with docker
 ```
 CONFIG_FOLDER=path/to/folder/with/pem/file
-docker run --mount type=bind,source=${CONFIG_FOLDER}/,destination=/data elrond-node-image-last --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG
+docker run --mount type=bind,source=${CONFIG_FOLDER}/,destination=/data chain-devnet-lacal --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG
 ```
 
