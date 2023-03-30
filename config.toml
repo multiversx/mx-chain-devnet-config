@@ -71,7 +71,7 @@
     # If empty, then all databases will be removed
     # If invalid format, then an error will be returned
     # Applicable only if AccountsTrieCleanOldEpochsData is set to true
-    AccountsTrieSkipRemovalCustomPattern = "%50"
+    AccountsTrieSkipRemovalCustomPattern = "%600"
 
     # NumEpochsToKeep - if the flag above is set to true, this will set the number of epochs to keep in the storage.
     # Epochs older that (current epoch - NumOfEpochsToKeep) will be removed
