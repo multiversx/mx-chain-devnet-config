@@ -246,7 +246,7 @@
     RelayedNonceFixEnableEpoch = 5082
 
     # SetGuardianEnableEpoch represents the epoch when the guard account feature is enabled in the protocol
-    SetGuardianEnableEpoch = 5190
+    SetGuardianEnableEpoch = 5189
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
