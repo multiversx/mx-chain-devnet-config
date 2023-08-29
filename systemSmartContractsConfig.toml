@@ -13,7 +13,7 @@
     ActivateBLSPubKeyMessageVerification = true
 
 [ESDTSystemSCConfig]
-    BaseIssuingCost = "5000000000000000000" #5 eGLD
+    BaseIssuingCost = "50000000000000000" #0.05 eGLD
     OwnerAddress = "erd17x5h63fgentz5302m9rd7ryttssttk68xtpr9qdztssw88vfs07s65w8dc"
 
 [GovernanceSystemSCConfig]
