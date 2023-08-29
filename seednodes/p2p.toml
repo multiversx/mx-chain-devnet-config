@@ -3,16 +3,15 @@
 #NodeConfig holds the P2P settings
 [Node]
     #Port is the port that will be opened by the node on all interfaces so other peers can connect to it
-    #If the port = 0, the node will search for a free port on the machine and use it
-    Port = "37373-38383"
+    #Can use single values such as 0, 10230, 15670 or a range such as 5000-10000
+    Port = "10000"
 
-    #ThresholdMinConnectedPeers represents the minimum number of connections a node should have before it can start
-    #the sync and consensus mechanisms
-    ThresholdMinConnectedPeers = 3
+    # The maximum peers that will connect to this node
+    MaximumExpectedPeerCount = 1024
 
-    # MinNumPeersToWaitForOnBootstrap is the minimum number of peers to wait on bootstrap or the node will wait the default
-    # time which is now set to ~20 seconds (the const defined in the common package named TimeToWaitForP2PBootstrap)
-    MinNumPeersToWaitForOnBootstrap = 10
+    #ThresholdMinConnectedPeers can be any value when used in conjunction with a seednode because the seednode does
+    #not have a sync and consensus mechanism. Default is 0.
+    ThresholdMinConnectedPeers = 0
 
     # available transports. All defined addresses contains a single '%d' markup that is mandatory and will
     # be replaced at runtime with the actual port value
