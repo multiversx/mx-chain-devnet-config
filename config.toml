@@ -38,14 +38,14 @@
    # SetGuardianEpochsDelay represents the delay in epochs between the execution time of the SetGuardian transaction and
    # the activation of the configured guardian.
    # Make sure that this is greater than the unbonding period!
-   SetGuardianEpochsDelay = 4 # 2 times the unbonding period
+   SetGuardianEpochsDelay = 4 # 2 times the maximum unbonding period which can be 2 epochs - 1 round
 
 [Versions]
     DefaultVersion = "default"
     VersionsByEpochs = [
         { StartEpoch = 0, Version = "*" },
         # The value of StartEpoch parameter for version 2 should be the same with the ScheduledMiniBlocksEnableEpoch flag from enableEpoch.toml file
-        { StartEpoch = 2, Version = "2" },
+        { StartEpoch = 1, Version = "2" },
     ]
     [Versions.Cache]
         Name = "VersionsCache"
@@ -637,8 +637,8 @@
    Type = "json"
 
 [EpochStartConfig]
-    MinRoundsBetweenEpochs = 1200
-    RoundsPerEpoch         = 1200
+    MinRoundsBetweenEpochs = 2400
+    RoundsPerEpoch         = 2400
     # Min and Max ShuffledOutRestartThreshold represents the minimum and maximum duration of an epoch (in percentage) after a node which
     # has been shuffled out has to restart its process in order to start in a new shard
     MinShuffledOutRestartThreshold = 0.06
@@ -688,8 +688,7 @@
         WasmerSIGSEGVPassthrough            = false # must be false for release
         WasmVMVersions = [
             { StartEpoch = 0, Version = "v1.2" },
-            { StartEpoch = 3, Version = "v1.3" },
-            { StartEpoch = 4, Version = "v1.4" },
+            { StartEpoch = 1, Version = "v1.4" },
         ]
 
     [VirtualMachine.Querying]
@@ -698,8 +697,7 @@
         WasmerSIGSEGVPassthrough            = false # must be false for release
         WasmVMVersions = [
             { StartEpoch = 0, Version = "v1.2" },
-            { StartEpoch = 3, Version = "v1.3" },
-            { StartEpoch = 4, Version = "v1.4" },
+            { StartEpoch = 1, Version = "v1.4" },
         ]
 
     [VirtualMachine.GasConfig]
@@ -710,9 +708,9 @@
 
 [BuiltInFunctions]
     AutomaticCrawlerAddresses =[
-        "erd1l4zf3jhetzynwh5ged032vqulxx2xl0mlw8xq8t6pq8ut88gfgqq84vlvd", #shard 0
-        "erd1l5rhxs97yrh878jjjgr7zyevdclrtmxfjzx02hxe86qsqgc0vyqsdq84ua", #shard 1
-        "erd1642sv7ad5dy5ry7pwt574wappd7ffc90cdnqec6ealh265pvyqpqqwscad", #shard 2
+        "erd16045g8cwmu00wna38tth93gesumaqw2jszmqck3s9lj55msnycqq9cm6e7", #shard 0
+        "erd1yeny8f4jh8ecz54yere72lsqzwadntkcds2n2mhr7wu0vrrvpsqshrpgua", #shard 1
+        "erd1l5uuldfz6c0v0lruk3yegf6q3lj7f3cdmeflwg8wuvnx28xzhspqsc63wd", #shard 2
     ]
     MaxNumAddressesInTransferRole = 100
 
@@ -920,14 +918,14 @@
     NumFullHistoryPeers = 3
 
 [HeartbeatV2]
-    PeerAuthenticationTimeBetweenSendsInSec          = 3600 # 1h
+    PeerAuthenticationTimeBetweenSendsInSec          = 7200 # 2h
     PeerAuthenticationTimeBetweenSendsWhenErrorInSec = 60   # 1min
     PeerAuthenticationThresholdBetweenSends          = 0.1  # 10%
     HeartbeatTimeBetweenSendsInSec                   = 300  # 5min
     HeartbeatTimeBetweenSendsDuringBootstrapInSec    = 60   # 1min
     HeartbeatTimeBetweenSendsWhenErrorInSec          = 60   # 1min
     HeartbeatThresholdBetweenSends                   = 0.1  # 10%
-    HeartbeatExpiryTimespanInSec                     = 5400 # 1h30min (larger than PeerAuthenticationTimeBetweenSendsInSec)
+    HeartbeatExpiryTimespanInSec                     = 9000 # 2h30min (larger than PeerAuthenticationTimeBetweenSendsInSec)
     MinPeersThreshold                                = 0.8  # 80%
     DelayBetweenRequestsInSec                        = 5    # 5sec
     MaxTimeoutInSec                                  = 7200 # 2h

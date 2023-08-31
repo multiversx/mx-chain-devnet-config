@@ -3,16 +3,15 @@
 #NodeConfig holds the P2P settings
 [Node]
     #Port is the port that will be opened by the node on all interfaces so other peers can connect to it
-    #If the port = 0, the node will search for a free port on the machine and use it
-    Port = "37373-38383"
+    #Can use single values such as 0, 10230, 15670 or a range such as 5000-10000
+    Port = "10000"
 
-    #ThresholdMinConnectedPeers represents the minimum number of connections a node should have before it can start
-    #the sync and consensus mechanisms
-    ThresholdMinConnectedPeers = 3
+    # The maximum peers that will connect to this node
+    MaximumExpectedPeerCount = 1024
 
-    # MinNumPeersToWaitForOnBootstrap is the minimum number of peers to wait on bootstrap or the node will wait the default
-    # time which is now set to ~20 seconds (the const defined in the common package named TimeToWaitForP2PBootstrap)
-    MinNumPeersToWaitForOnBootstrap = 10
+    #ThresholdMinConnectedPeers can be any value when used in conjunction with a seednode because the seednode does
+    #not have a sync and consensus mechanism. Default is 0.
+    ThresholdMinConnectedPeers = 0
 
     # available transports. All defined addresses contains a single '%d' markup that is mandatory and will
     # be replaced at runtime with the actual port value
@@ -22,7 +21,7 @@
         WebTransportAddress = "" # optional WebTransport address. If this transport should be activated, should be in this format: /ip4/0.0.0.0/udp/%d/quic-v1/webtransport
         [Node.Transports.TCP]
             ListenAddress = "/ip4/0.0.0.0/tcp/%d" # TCP listen address
-            PreventPortReuse = false
+            PreventPortReuse = true
 
 # P2P peer discovery section
 
@@ -70,20 +69,20 @@
 
 [Sharding]
     # The targeted number of peer connections
-    TargetPeerCount = 75
-    MaxIntraShardValidators = 25
-    MaxCrossShardValidators = 15
-    MaxIntraShardObservers = 15
-    MaxCrossShardObservers = 15
-    MaxSeeders = 2
+    TargetPeerCount = 0
+    MaxIntraShardValidators = 0
+    MaxCrossShardValidators = 0
+    MaxIntraShardObservers = 0
+    MaxCrossShardObservers = 0
+    MaxSeeders = 0
 
     #available options:
     #  `ListsSharder` will split the peers based on the shard membership (intra, cross or unknown)
     #  `OneListSharder` will do just the connection triming (upto TargetPeerCount value) not taking into account
     #              the shard membership of the connected peers
     #  `NilListSharder` will disable conection trimming (sharder is off)
-    Type = "ListsSharder"
+    Type = "NilListSharder"
 
     [AdditionalConnections]
         #this value will be added to the target peer count automatically when the node will be in full archive mode
-        MaxFullHistoryObservers = 10
+        MaxFullHistoryObservers = 0
