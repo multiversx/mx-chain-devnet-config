@@ -315,11 +315,12 @@
     MaxNodesChangeEnableEpoch = [
         { EpochEnable = 0, MaxNumNodes = 320, NodesToShufflePerShard = 14 },
         { EpochEnable = 1, MaxNumNodes = 360, NodesToShufflePerShard = 24 },
+        { EpochEnable = 99993, MaxNumNodes = 400, NodesToShufflePerShard = 24 },
         # Staking v4 configuration, where:
         # - Enable epoch = StakingV4Step3EnableEpoch
         # - NodesToShufflePerShard = same as previous entry in MaxNodesChangeEnableEpoch
         # - MaxNumNodes = (MaxNumNodesFromPreviousEpochEnable - (numOfShards+1)*NodesToShufflePerShard)
-        { EpochEnable = 99996, MaxNumNodes = 264, NodesToShufflePerShard = 24 },
+        { EpochEnable = 99996, MaxNumNodes = 304, NodesToShufflePerShard = 24 },
     ]
 
 [GasSchedule]
