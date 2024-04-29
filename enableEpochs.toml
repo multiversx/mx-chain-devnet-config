@@ -285,25 +285,25 @@
     FixGasRemainingForSaveKeyValueBuiltinFunctionEnableEpoch = 629
 
     # CurrentRandomnessOnSortingEnableEpoch represents the epoch when the current randomness on sorting is enabled
-    CurrentRandomnessOnSortingEnableEpoch = 99994
+    CurrentRandomnessOnSortingEnableEpoch = 1398
 
     # StakeLimitsEnableEpoch represents the epoch when stake limits on validators are enabled
     # Should have the same value as StakingV4Step1EnableEpoch that triggers the automatic unstake operations for the queue nodes
-    StakeLimitsEnableEpoch = 99994
+    StakeLimitsEnableEpoch = 1398
 
     # StakingV4Step1EnableEpoch represents the epoch when staking v4 is initialized. This is the epoch in which
     # all nodes from staking queue are moved in the auction list
-    StakingV4Step1EnableEpoch = 99994
+    StakingV4Step1EnableEpoch = 1398
 
     # StakingV4Step2EnableEpoch represents the epoch when staking v4 is enabled. Should have a greater value than StakingV4Step1EnableEpoch.
     # From this epoch, all shuffled out nodes are moved to auction nodes. No auction nodes selection is done yet.
-    StakingV4Step2EnableEpoch = 99995
+    StakingV4Step2EnableEpoch = 1399
 
     # StakingV4Step3EnableEpoch represents the epoch in which selected nodes from auction will be distributed to waiting list
-    StakingV4Step3EnableEpoch = 99996
+    StakingV4Step3EnableEpoch = 1400
 
     # AlwaysMergeContextsInEEIEnableEpoch represents the epoch in which the EEI will always merge the contexts
-    AlwaysMergeContextsInEEIEnableEpoch = 99994
+    AlwaysMergeContextsInEEIEnableEpoch = 1398
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
@@ -315,12 +315,12 @@
     MaxNodesChangeEnableEpoch = [
         { EpochEnable = 0, MaxNumNodes = 320, NodesToShufflePerShard = 14 },
         { EpochEnable = 1, MaxNumNodes = 360, NodesToShufflePerShard = 24 },
-        { EpochEnable = 99993, MaxNumNodes = 400, NodesToShufflePerShard = 24 },
+        { EpochEnable = 1397, MaxNumNodes = 400, NodesToShufflePerShard = 24 },
         # Staking v4 configuration, where:
         # - Enable epoch = StakingV4Step3EnableEpoch
         # - NodesToShufflePerShard = same as previous entry in MaxNodesChangeEnableEpoch
         # - MaxNumNodes = (MaxNumNodesFromPreviousEpochEnable - (numOfShards+1)*NodesToShufflePerShard)
-        { EpochEnable = 99996, MaxNumNodes = 304, NodesToShufflePerShard = 24 },
+        { EpochEnable = 1400, MaxNumNodes = 304, NodesToShufflePerShard = 24 },
     ]
 
 [GasSchedule]
