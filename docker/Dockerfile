@@ -12,7 +12,7 @@ WORKDIR /go/mx-chain-go
 
 #MultiversX node
 WORKDIR /go/mx-chain-go/cmd/node
-RUN go build -v -ldflags="-X main.appVersion=$(git describe --git-dir /config/.git --tags --long --dirty)"
+RUN go build -v -ldflags="-X main.appVersion=$(git --git-dir /config/.git describe --tags --long --dirty)"
 
 RUN mkdir -p /lib_amd64 /lib_arm64
 
