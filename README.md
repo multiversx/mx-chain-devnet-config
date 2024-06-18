@@ -18,11 +18,11 @@ For more info how to connect to the devnet, please check [here](https://docs.mul
 ## run an MultiversX observer/validator with docker
 
 ### build docker image
-```docker image build . -t chain-devnet-lacal -f ./docker/Dockerfile```
+```docker image build . -t chain-devnet-local -f ./docker/Dockerfile```
 
 ### run node with docker
 ```
 CONFIG_FOLDER=path/to/folder/with/pem/file
-docker run --mount type=bind,source=${CONFIG_FOLDER}/,destination=/data chain-devnet-lacal --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG
+docker run --mount type=bind,source=${CONFIG_FOLDER}/,destination=/data chain-devnet-local --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG
 ```
 
