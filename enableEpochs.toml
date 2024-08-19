@@ -310,7 +310,7 @@
     CleanupAuctionOnLowWaitingListEnableEpoch = 1505
 
     # UseGasBoundedShouldFailExecutionEnableEpoch represents the epoch when use bounded gas function should fail execution in case of error
-    UseGasBoundedShouldFailExecutionEnableEpoch = 2073
+    UseGasBoundedShouldFailExecutionEnableEpoch = 2064
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
