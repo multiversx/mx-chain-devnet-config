@@ -328,7 +328,7 @@
     RelayedTransactionsV3EnableEpoch = 2327
 
     # RelayedTransactionsV3DisableEpoch represents the epoch when the relayed transactions V3 will be disabled
-    RelayedTransactionsV3DisableEpoch = 9999999
+    RelayedTransactionsV3DisableEpoch = 2506
 
     # FixRelayedBaseCostEnableEpoch represents the epoch when the fix for relayed base cost will be enabled
     FixRelayedBaseCostEnableEpoch = 2327
