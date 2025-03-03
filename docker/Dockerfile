@@ -29,13 +29,12 @@ WORKDIR /go/mx-chain-go/cmd/node
 
 # ===== SECOND STAGE ======
 FROM ubuntu:22.04
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update &&  apt-get --reinstall install libc-bin && apt-get upgrade -y
+ARG TARGETARCH
+RUN apt-get update -y && apt-get upgrade -y
 
 COPY --from=builder "/go/mx-chain-go/cmd/node" "/go/mx-chain-go/cmd/node/"
 
 # Copy architecture-specific files
-ARG TARGETARCH
 COPY --from=builder "/lib_${TARGETARCH}/*" "/lib/"
 
 WORKDIR /go/mx-chain-go/cmd/node/
