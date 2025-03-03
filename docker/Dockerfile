@@ -30,7 +30,7 @@ WORKDIR /go/mx-chain-go/cmd/node
 # ===== SECOND STAGE ======
 FROM ubuntu:22.04
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get update &&  apt-get --reinstall install libc-bin && apt-get upgrade -y
 
 COPY --from=builder "/go/mx-chain-go/cmd/node" "/go/mx-chain-go/cmd/node/"
 
