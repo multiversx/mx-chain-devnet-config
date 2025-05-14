@@ -43,13 +43,13 @@
 # ChainParametersByEpoch defines chain operation configurable values that can be modified based on epochs
 ChainParametersByEpoch = [
     { EnableEpoch = 0, RoundDuration = 6000, ShardConsensusGroupSize = 21, ShardMinNumNodes = 58, MetachainConsensusGroupSize = 58, MetachainMinNumNodes = 58, Hysteresis = 0.2, Adaptivity = false },
-    { EnableEpoch = 3675, RoundDuration = 6000, ShardConsensusGroupSize = 58, ShardMinNumNodes = 58, MetachainConsensusGroupSize = 58, MetachainMinNumNodes = 58, Hysteresis = 0.2, Adaptivity = false }
+    { EnableEpoch = 9999999, RoundDuration = 6000, ShardConsensusGroupSize = 58, ShardMinNumNodes = 58, MetachainConsensusGroupSize = 58, MetachainMinNumNodes = 58, Hysteresis = 0.2, Adaptivity = false }
 ]
 
 # EpochChangeGracePeriodEnableEpoch represents the configuration of different grace periods for epoch change with their activation epochs
 EpochChangeGracePeriodByEpoch = [
     {EnableEpoch = 0, GracePeriodInRounds = 1 },
-    {EnableEpoch = 3675, GracePeriodInRounds = 10 }, # Andromeda epoch comes with a longer grace period
+    {EnableEpoch = 9999999, GracePeriodInRounds = 10 }, # Andromeda epoch comes with a longer grace period
 ]
 
 [HardwareRequirements]
