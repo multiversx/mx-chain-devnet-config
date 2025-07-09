@@ -367,7 +367,7 @@
     GovernanceFixesEnableEpoch = 3965
 
     # FixGetBalanceEnableEpoch represents the epoch when get balance opcode fix will be enabled
-    FixGetBalanceEnableEpoch = 9999999
+    FixGetBalanceEnableEpoch = 4011
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
