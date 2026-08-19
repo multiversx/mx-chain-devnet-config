@@ -73,7 +73,7 @@ ConsensusConfigsByRound = [
     ProcessingThresholdPercent = 85
     },
     {
-    EnableRound = 6439,
+    EnableRound = 15539530,
     SubroundsTiming = [
         { StartTime = 0.0,  EndTime = 0.05 },  # start round
         { StartTime = 0.05, EndTime = 0.35 },  # block
@@ -104,7 +104,7 @@ ProcessConfigsByRound = [
     NumHeadersToRequestInAdvance = 10
     },
     {
-    EnableRound = 6439,
+    EnableRound = 15539530,
     MaxRoundsWithoutNewBlockReceived = 100,
     MaxRoundsWithoutCommittedBlock = 100,
     RoundModulusTriggerWhenSyncIsStuck = 200,
@@ -125,7 +125,7 @@ EpochStartConfigsByEpoch = [
 
 EpochStartConfigsByRound = [
     { EnableRound = 0, MaxRoundsWithoutCommittedStartInEpochBlock = 50 },
-    { EnableRound = 6439, MaxRoundsWithoutCommittedStartInEpochBlock = 500 },
+    { EnableRound = 15539530, MaxRoundsWithoutCommittedStartInEpochBlock = 500 },
 ]
 
 ConsensusConfigsByEpoch = [
