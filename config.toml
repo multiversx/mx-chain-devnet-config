@@ -1010,29 +1010,29 @@ ConsensusConfigsByEpoch = [
 
  # Each interval is inclusive. Keep previous intervals when adding a later recovery.
  [[HardforkRoundExclusions]]
-     StartRound = 0 # TODO: update here
+     StartRound = 19831501
      EndRound = 0 # TODO: update here
 
 [HardforkRecoveryCheckpoint]
     Enabled = true
-    Round = 0 # TODO: update here
+    Round = 19831500
 
-# TODO: update headers
+
 [[HardforkRecoveryCheckpoint.Headers]]
     ShardID = 4294967295
-    Hash = ""
+    Hash = "80b24671db82a9f096b5debd89d68182ec8c6f8a8752c429b02dd50a21a29a97"
 
 [[HardforkRecoveryCheckpoint.Headers]]
      ShardID = 0
-     Hash = ""
+     Hash = "d4b5254decfa1aa3a7429ba5c62d1d8ea3caa486e9f1f56679653aa4180b4664"
 
 [[HardforkRecoveryCheckpoint.Headers]]
     ShardID = 1
-    Hash = ""
+    Hash = "fa33d89248663617245528b387e1dc93330a46d31852d05aeedb4833513aafc2"
 
 [[HardforkRecoveryCheckpoint.Headers]]
     ShardID = 2
-    Hash = ""
+    Hash = "933428ae2498dc6864a1d6a59d35f46aaaf04eaa0f3419f2375009f838a7e576"
 
 [Hardfork]
     EnableTrigger = true
