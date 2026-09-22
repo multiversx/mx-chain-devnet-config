@@ -53,9 +53,8 @@
 
     # ProtocolIDs represents the protocols that this node will advertise to other peers
     # To connect to other nodes, those nodes should have at least one common protocol string
-    ProtocolIDs = [ # TODO: update here
-        "/erd/kad/0.2.4",
-        "/mvx/devnet-full-archive/1.0.0",
+    ProtocolIDs = [
+        "/mvx/devnet/archive/2",
     ]
 
     # InitialPeerList represents the list of strings of some known nodes that will bootstrap this node
