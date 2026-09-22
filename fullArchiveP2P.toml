@@ -53,7 +53,7 @@
 
     # ProtocolIDs represents the protocols that this node will advertise to other peers
     # To connect to other nodes, those nodes should have at least one common protocol string
-    ProtocolIDs = [
+    ProtocolIDs = [ # TODO: update here
         "/erd/kad/0.2.4",
         "/mvx/devnet-full-archive/1.0.0",
     ]
@@ -68,8 +68,8 @@
     # If the initial peers list is left empty, the node will not try to connect to other peers during initial bootstrap
     # phase but will accept connections and will do the network discovery if another peer connects to it
     InitialPeerList = [
-        "/ip4/43.157.41.132/tcp/10000/p2p/16Uiu2HAkvvZQ4v2rQ8jNMnPFySx49g7J3yGcuqhvrtXaMZW8QGH6",
-        "/ip4/5.22.211.171/tcp/10000/p2p/16Uiu2HAm5GuMtpQTr2e8xfw4uengasiVpwVXUcG62eWd3iRvwLCH",
+        "/ip4/43.157.41.132/tcp/10000/p2p/16Uiu2HAkvvZQ4v2rQ8jNMnPFySx49g7J3yGcuqhvrtXaMZW8QGH6", # TODO: update here
+        "/ip4/5.22.211.171/tcp/10000/p2p/16Uiu2HAm5GuMtpQTr2e8xfw4uengasiVpwVXUcG62eWd3iRvwLCH", # TODO: update here
     ]
 
     # kademlia's routing table bucket size
