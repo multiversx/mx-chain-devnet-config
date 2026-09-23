@@ -1010,13 +1010,12 @@ ConsensusConfigsByEpoch = [
 
  # Each interval is inclusive. Keep previous intervals when adding a later recovery.
  [[HardforkRoundExclusions]]
-     StartRound = 19831501
-     EndRound = 20400896
+    StartRound = 19831501
+    EndRound = 20400896
 
 [HardforkRecoveryCheckpoint]
     Enabled = true
     Round = 19831500
-
 
 [[HardforkRecoveryCheckpoint.Headers]]
     ShardID = 4294967295
