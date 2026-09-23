@@ -1008,7 +1008,7 @@ ConsensusConfigsByEpoch = [
         "erd1qqqqqqqqqqqqqpgq73dzn6rmncfsr9054hjam3zc0th7w7ex8tksv9z97n"
     ]
 
- [[HardforkRoundExclusions]]
+[[HardforkRoundExclusions]]
     StartRound = 19831501
     EndRound = 20400896
 
